@@ -3,7 +3,7 @@ import edu.princeton.cs.algs4.StdIn;
 public class Client{
     public static void main(String[] args){
         int N = StdIn.readInt();
-        QuickUnionUF uf = new QuickUnionUF(N);
+        WeightedUF uf = new WeightedUF(N);
         System.out.println(N);
         while(!StdIn.isEmpty()){
             int p = StdIn.readInt();

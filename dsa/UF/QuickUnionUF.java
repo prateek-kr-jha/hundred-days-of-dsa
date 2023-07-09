@@ -30,6 +30,7 @@ public class QuickUnionUF {
         int rootP = root(p);
         int rootQ = root(q);
         id[rootP] = rootQ;
+        count--;
     }
     
     public void printConnections(){

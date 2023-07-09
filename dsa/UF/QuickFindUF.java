@@ -22,6 +22,7 @@ public class QuickFindUF {
                 id[i] = idQ;
             }
         }
+        count--;
     }
 
     public int count(){
