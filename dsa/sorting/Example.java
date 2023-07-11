@@ -34,6 +34,7 @@ public class Example {
         System.out.println(less(a, b));
         String[] input = In.readStrings();
         System.out.println(isSorted(input));
+        // assert a > 30:"smaller";
         assert isSorted(input) : "not sorted";
         show(input);
     }
