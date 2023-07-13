@@ -29,8 +29,6 @@ public class Example {
     }
 
     public static void main(String[] args){
-        int a = 26;
-        int b = 25;
         System.out.println(less(a, b));
         String[] input = In.readStrings();
         System.out.println(isSorted(input));
