@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.In;
 public class Selection {
     //change less logic for ascending or descending
     private static boolean less(Comparable num1, Comparable num2){
-        return num1.compareTo(num2) > 0;
+        return num1.compareTo(num2) < 0;
     }
 
     private static void exch(Comparable[] array, int i, int j){
@@ -31,7 +31,7 @@ public class Selection {
     public static void sort(Comparable[] array){
         for(int i = 0; i < array.length - 1; i++){
             for(int j = i + 1; j < array.length; j++){
-                if(less(array[i], array[j])){
+                if(less(array[j], array[i])){
                     exch(array, i, j);
                 }
             }

@@ -11,7 +11,7 @@ public class Insertion {
     }
 
     private static boolean isSorted(Comparable[] array){
-        for(int i = 0; i < array.length; i++){
+        for(int i = 1; i < array.length; i++){
             if(less(array[i], array[i - 1])){
                 return false;
             }
@@ -29,7 +29,12 @@ public class Insertion {
     }
 
     private static void sort(Comparable[] array){
-        
+        for(int i = 1; i < array.length; i++){
+            for(int j = i; j > 0 && less(array[j], array[j - 1]); j--){
+                exch(array, j, j - 1);
+                
+            }
+        }
     }
 
     public static void main(String[] args){
@@ -39,5 +44,7 @@ public class Insertion {
         sort(input);
         assert isSorted(input) : "not sorted";
         show(input);
+        System.out.println(isSorted(input));
+
     }
 }
