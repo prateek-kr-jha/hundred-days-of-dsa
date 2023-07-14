@@ -3,20 +3,16 @@ import edu.princeton.cs.algs4.In;
 public class MergeTopDown {
     //change less logic for ascending or descending
     private static boolean less(Comparable num1, Comparable num2){
-        // System.out.println("inside less");
         return num1.compareTo(num2) < 0;
     }
     public static void merge(Comparable[] array, int lo, int mid, int hi){
         int i = lo, j = mid + 1;
-        // System.out.println(lo + "   " + mid + "  " + hi);
         Comparable[] aux = new Comparable[array.length];
         for(int k = 0; k < array.length; k++){
             aux[k] = array[k];
         }
 
         for(int k = lo; k <= hi; k++){
-            // System.out.println(j);
-            // System.out.println(aux[j] + "   " + aux[i]);
             if(i > mid){
                 array[k] = aux[j++];
             } else if(j > hi) {
@@ -35,8 +31,8 @@ public class MergeTopDown {
         if(lo >= hi){
             return;
         }
-        // int mid = (hi + lo) / 2;
-        int mid = lo + (hi - lo) / 2;
+        int mid = (hi + lo) / 2;
+        // int mid = lo + (hi - lo) / 2;
 
         sort(array, lo, mid);
         sort(array, mid + 1, hi);
