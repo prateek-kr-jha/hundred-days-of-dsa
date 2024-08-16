@@ -8,3 +8,6 @@
 
 # connected components:
 maximal set of objects that are mutually connected.
+
+- quick find
+- quick union
