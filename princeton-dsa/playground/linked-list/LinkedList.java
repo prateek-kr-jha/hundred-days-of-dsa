@@ -5,10 +5,7 @@ public class LinkedList<Item> {
         Item item;
         Node next;
 
-        public Node() {
-            this.item = null;
-            this.next = null;
-        }
+        public Node() {}
 
         public Node(Item item) {
             this.item = item;
@@ -26,7 +23,7 @@ public class LinkedList<Item> {
     private int size = 0;
 
     public LinkedList() {
-        this.head = new Node();
+        this.head = null;
         this.tail = this.head;
     }
 
@@ -38,9 +35,19 @@ public class LinkedList<Item> {
     public void printList() {
         Node iterator = this.head;
         while (iterator != null) {
-            System.out.println(iterator.item + " ");
+            System.out.print(iterator.item + " ");
             iterator = iterator.next;
         }
         System.out.println();
+    }
+
+    public void addFirst(Item item) {
+        Node newNode = new Node(item);
+        newNode.next = this.head;
+        this.head = newNode;
+        if (size == 0) {
+            this.tail = this.head;
+        }
+        this.size++;
     }
 }
