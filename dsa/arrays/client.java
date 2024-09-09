@@ -6,10 +6,6 @@ public class client {
 
     public static void main(String[] args) {
         System.out.println("Hi, there " + args[0]);
-        // String l = scn.nextLine();
-        // System.out.println("bye " + l);
-        // while (scn.hasNext()) System.out.println(scn.nextInt());
-        // helper help = new helper();
         int[] testArray = helper.createArrayWithInput(scn.nextInt(), scn);
 
         for (int i = 0; i < testArray.length; i++) {
