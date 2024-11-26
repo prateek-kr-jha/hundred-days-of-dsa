@@ -13,7 +13,7 @@ public class DVD{
         return this.name + ", directed by " + this.director + ", released in " + this.releaseYear;
     }
     public static void main(String[] args) {
-        DVD rajaBabu = new DVD("raja babu", 2003, "Davivd Dhawan");
+        DVD rajaBabu = new DVD("raja babu", 2003, "David Dhawan");
         System.out.println(rajaBabu.toString());
         DVD[] dvdCollection = new DVD[15];
     }
